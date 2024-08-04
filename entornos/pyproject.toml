@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "my-project"
+version = "0.1.0"
+description = "text"
+authors = ["Your Name <you@example.com>"]
+license = "n"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+numpy = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.group.lint]
+optional = true
+
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.2.2"
+
+
+[tool.poetry.group.build]
+optional = true
+
+
+[tool.poetry.group.build.dependencies]
+importlib_metadata = "7.2.1"
+twine = "^4.0.2"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+pytest-cov = "^4.0.0"
+coverage = {extras = ["xml"], version = "^7.2.5"}
+pytest-mock = "^3.14.0"
